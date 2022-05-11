@@ -1,100 +1,74 @@
-/* very badly written css? :)) */
-*{
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    background-color: #16161e;
-}
-
 @font-face {
-    font-family: JetBrainsMono;
-    src: url(../assets/fonts/ttf/JetBrainsMono-ExtraLight.ttf);
-}   
-
-.clr{
-    clear: both;
+	font-family: CartographCF;
+	src: url(../assets/fonts/Cartograph\ CF\ Regular\ Nerd\ Font\ Complete.otf);
 }
 
-#main-header {
-    height: 240px;
-    margin: 0px 0px 0px 0px;
-    background-color: #1a1b26;
+* {
+    --bg:       #151515;   
+    --bg-alt:   #191919;
+    --sidebar:  #212121;
+    --border:   #2e2e2e;
+	--gray:		#888888;
+	--gray2:	#ababab;
+    --fg:       #e8e8d3;
+    --red:		#cf6a4c;  
+    --yellow:	#d8ad4c;
+	--green:	#99ad6a;
+	--blue: 	#597bc5;
+	font-family: CartographCF;
 }
 
-#main-header img{
-    float: left;
-    margin: 20px;
-    height: 200px;
-    border-radius: 1em;
+body {
+    padding: 0%;
+    margin: 0%;
+    background-color: var(--bg-alt);
+    color: var(--gray);
 }
 
-#main-header div{
-    float: left;
-    /* background-color: #1a1b26; */
-    color: #f7768e;
-    font-family: JetBrainsMono, monospace, sans-serif;
-    font-size: 28px;
-    margin: 20px 20px 0px 0px;
-    padding: 45px 10px;
-    border-radius: 1em;
+.sidebar {
+    background-color: var(--sidebar);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 100%;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	font-size: 20px;
+	line-height: 45px;
+	border-left: var(--border) 2px solid;
+	border-top: var(--border) 2px solid;
 }
 
-#navbar{
-    /* background-color: #2ac3de; */
-    font-family: JetBrainsMono, monospace, sans-serif;
+.sidebar img {
+	float: left;
+    height: 250px;
+    /* border-radius: 1em; */
 }
 
-#navbar ul{
-    list-style: none;
+.sidebar ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
-#navbar li{
-    display: inline;
+.main {
+    top: 0;
+    left: 0;
+	margin: 3%;
 }
 
-#navbar a{
-    text-decoration: none;
+
+a {
+	text-decoration: none;
+	color: var(--gray);
 }
 
-.nav-button{
-    /* position: absolute; */
-    padding: 10px;
-    margin-top: 20px;
-    margin-left: 20px;
-    border-radius: 1em;
-    height: 50px;
-    background-color: #1a1b26;
+a:hover {
+	color: var(--gray2);
 }
 
-.foo{
-    margin: 20px;
-    padding: 30px;
-    background-color: #1a1b26;
-    color: #f7768e;
-    border-radius: 1em;
-    font-family: JetBrainsMono, monospace, sans-serif;
-    font-size: 1.2em;
-    line-height: 1.6em;
-}
-
-.bar{
-    margin: 20px;
-    padding: 30px;
-    background-color: #1a1b26;
-    color: #bb9af7;
-    border-radius: 1em;
-    font-family: JetBrainsMono, monospace, sans-serif;
-    font-size: 1.2em;
-    line-height: 1.6em;
-}
-
-#main-footer{
-    /* text-align: center; */
-    font-family: JetBrainsMono, monospace, sans-serif;
-    font-size: 1em;
-    color: #565f89;
-    padding: 10px;
-    margin: 20px;
+a:active {
+	color: var(--fg);
 }
